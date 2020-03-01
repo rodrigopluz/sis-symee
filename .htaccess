@@ -1,0 +1,33 @@
+<IfModule mod_rewrite.c>
+    # php 7.0
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+    Options +FollowSymLinks
+    RewriteRule .* index.php/$0 [PT,L]
+
+    # php 7.2
+    # DirectoryIndex index.php
+    # RewriteEngine on
+    # RewriteBase /
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond $1 !^(index\.php|.well-known|images|robots\.txt)
+    # RewriteRule ^(.*)$ index.php?/$1
+</IfModule>
+
+# <IfModule mod_headers.c>
+#  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+#    Header set Access-Control-Allow-Origin "*"
+#  </FilesMatch>
+# </IfModule>
+
+# Use php 7.0 as default
+# AddHandler application/x-httpd-php70 .php
+# <IfModule mod_suphp.c>
+#    suPHP_ConfigPath /opt/php70/lib
+# </IfModule>
+
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
