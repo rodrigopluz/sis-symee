@@ -1,0 +1,28 @@
+{
+    "description": "SYMEE TECNOLOG",
+    "homepage": "https://symee.com.br",
+    "type": "sis-symee",
+    "license": "MIT",
+	"require": {
+		"php": ">=7.0",
+		"doctrine/orm": "^2.5",
+		"symfony/yaml": "^3.4",
+		"symfony/config": "^3.4",
+		"symfony/console": "^3.4",
+		"symfony/var-dumper": "^3.4",
+		"symfony/dependency-injection": "^3.4",
+		"phpmailer/phpmailer": "dev-master",
+		"emberlabs/gravatarlib": "dev-master",
+		"twig/twig": "^1.24",
+        "chriskacerguis/codeigniter-restserver": "^3.0"
+	},
+	"require-dev": {
+        "rodrigopluz/combustor": "^1.2"
+	},
+	"authors": [
+        {
+            "name": "Rodrigo Pereira",
+            "email": "rodrigopluz@gmail.com"
+        }
+    ]
+}

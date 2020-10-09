@@ -90,7 +90,7 @@ class UserCompanys extends CI_Controller
      */
     public function create()
     {
-        $page_data['user_company'] = $this->UserCompany->get_user_company($id);
+        $page_data['user_company'] = $this->UserCompany->get_user_company();
         
         /*- company -*/
         $id_company = $page_data['user_company']['id_company'];

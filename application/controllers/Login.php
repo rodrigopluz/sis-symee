@@ -92,15 +92,14 @@ class Login extends CI_Controller
      */
     public function validate_login($cpf = '', $pass = '')
     {
-        $password = md5($pass);
+        // $password = md5($pass);
+        $password = $pass;
         $credential = ['user_company.login' => $cpf, 'user_company.password' => $password, 'user_company.status' => '1'];
 
         // Checking login credential for admin
         $query = $this->UserCompany->get_validate_login($credential);
-
         if ($query->num_rows() > 0) {
             $row = $query->row();
-
             $this->session->set_userdata('admin_login', '1');
             $this->session->set_userdata('login_user_id', $row->id);                // id da tb user_company
             $this->session->set_userdata('admin_id', $row->id_person);              // id da tb person

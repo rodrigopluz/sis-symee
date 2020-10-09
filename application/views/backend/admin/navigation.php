@@ -1,11 +1,11 @@
 <div class="sidebar-menu">
     <header class="logo-env">
-        <div class="logo" style="">
+        <div class="logo">
             <a href="<?= base_url(); ?>">
                 <?= img(['src' => image(base_url().'uploads/logo.png', null), 'width' => '200', 'alt' => '']); ?>
             </a>
         </div>
-        <div class="sidebar-collapse" style="">
+        <div class="sidebar-collapse">
             <a href="#" class="sidebar-collapse-icon with-animation">
                 <i class="entypo-menu"></i>
             </a>

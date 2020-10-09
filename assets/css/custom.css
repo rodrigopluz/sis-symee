@@ -1,0 +1,100 @@
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+/* body { */
+/* } */
+
+.login-page .login-header .login-content {
+	width: 100%;
+}
+.login-page .description h2 {
+	color: #cacaca; 
+	font-weight: 100;
+}
+.login-page .login-form {
+	padding-top: 30px;
+}
+.login-page .login-bottom-links {
+	padding: 20px 0 0;
+}
+.title-div {
+	text-align: center;
+}
+.title-h2 {
+	font-weight: 200; 
+	margin: 0px;
+}
+.icon-bandeira {
+	height: 16px;
+	width: 16px; 
+}
+.hr-header {
+	margin-top: 0px;
+}
+.form-groups-bordered > .form-group {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.tab-content > .tab-pane {
+	padding: 15px 5px 5px;
+}
+.label-sexo {
+	margin-bottom: 10px;
+}
+.radio + .radio, .checkbox + .checkbox {
+	margin-top: 0px !important;
+}
+
+.btns-entail, .table-entail {
+	display: none;
+}
+
+#ajax_loader {
+	position: fixed; 
+	left: 50%; 
+	top: 50%; 
+	display: none;
+	z-index: 9999;
+}
+.not-padding {
+	padding: 0;
+}
+
+.not-active {
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none;
+	color: #999;
+}
+
+.sys_modal_confirm, .sys_modal_close {
+	width: 30%;
+}
+.sys_modal_small {
+	width: 40%;
+}
+.sys_modal_work {
+	width: 60%;
+}
+
+.ui-menu {
+	background: #32415a;
+	color: white;
+	float: left;
+	padding: 0 0.5em;
+}
+.ui-menu .ui-menu-item {
+	padding: 0.5em 0;
+}
+.text-center {
+	text-align: center;
+	width: 8rem;
+}
+.min-height {
+	min-height: 275px;
+}
+.center-text {
+	text-align: center;
+}
