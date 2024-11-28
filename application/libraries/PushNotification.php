@@ -14,7 +14,7 @@ if (!defined('BASEPATH'))
 class PushNotification
 {
     // Android - API access key from Google API's Console.
-    private static $API_ACCESS_KEY = 'AAAAC2L3dx4:APA91bGQTmTbX-DDvOkVowEkEWAH2bRY8h8-ymBJzQD4P5FNjTlbUg5rXwfGru8LRvRLZQK2HvMl9lnhjFvbkIpQ44f4y9D0mXR96JEKSrP9YwpznahG3JVjGh4F4hz08IzFhxjzv47C';
+    private static $API_ACCESS_KEY = `${process.env.API_ACCESS_KEY}`;
 
     // iOS - private key's passphrase.
     private static $passphrase = '';
