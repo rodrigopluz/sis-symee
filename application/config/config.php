@@ -212,7 +212,7 @@ $config['directory_trigger'] = 'd';
  * For a live site you'll usually only enable Errors (1) to be logged otherwise
  * your log files will fill up very fast.
  */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 4;
 
 /**
  *--------------------------------------------------------------------------
@@ -350,15 +350,23 @@ $config['encryption_key'] = 'sis-symee2019';
  * Other session cookie settings are shared with the rest of the application,
  * except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
  */
-$config['sess_cookie_name']		= 'ci_session';
-$config['sess_expiration']		= 7200;
-$config['sess_expire_on_close']	= TRUE;
-$config['sess_encrypt_cookie']	= FALSE;
-$config['sess_use_database']	= TRUE;
-$config['sess_table_name']		= 'ci_sessions';
-$config['sess_match_ip']		= FALSE;
-$config['sess_match_useragent']	= TRUE;
-$config['sess_time_to_update']	= $config['sess_expiration'];
+$config['sess_driver'] = 'database';
+$config['sess_cookie_name'] = 'ci_session';
+$config['sess_expiration'] = 7200;
+$config['sess_save_path'] = 'ci_sessions';
+$config['sess_match_ip'] = FALSE;
+$config['sess_time_to_update'] = 300;
+$config['sess_regenerate_destroy'] = FALSE;
+
+// $config['sess_cookie_name']		= 'ci_session';
+// $config['sess_expire_on_close']	= TRUE;
+// $config['sess_encrypt_cookie']	= FALSE;
+// $config['sess_use_database']	= TRUE;
+// $config['sess_save_path']       = 'ci_sessions';
+// $config['sess_table_name']		= 'ci_sessions';
+// $config['sess_match_ip']		= FALSE;
+// $config['sess_match_useragent']	= TRUE;
+// $config['sess_time_to_update']	= $config['sess_expiration'];
 
 /**
  *--------------------------------------------------------------------------

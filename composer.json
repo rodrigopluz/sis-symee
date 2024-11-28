@@ -1,8 +1,8 @@
 {
-    "description": "SYMEE TECNOLOG",
-    "homepage": "https://symee.com.br",
-    "type": "sis-symee",
-    "license": "MIT",
+	"description": "SYMEE TECNOLOG",
+	"homepage": "https://dev.rodrigopluz.com.br",
+	"type": "sis-symee",
+	"license": "MIT",
 	"require": {
 		"php": ">=7.0",
 		"doctrine/orm": "^2.5",
@@ -14,15 +14,15 @@
 		"phpmailer/phpmailer": "dev-master",
 		"emberlabs/gravatarlib": "dev-master",
 		"twig/twig": "^1.24",
-        "chriskacerguis/codeigniter-restserver": "^3.0"
+		"chriskacerguis/codeigniter-restserver": "^3.0"
 	},
 	"require-dev": {
-        "rodrigopluz/combustor": "^1.2"
+		"rodrigopluz/combustor": "^1.2"
 	},
 	"authors": [
-        {
-            "name": "Rodrigo Pereira",
-            "email": "rodrigopluz@gmail.com"
-        }
-    ]
+		{
+			"name": "Rodrigo Pereira",
+			"email": "rodrigopluz@gmail.com"
+		}
+	]
 }

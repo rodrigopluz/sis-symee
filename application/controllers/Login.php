@@ -115,6 +115,8 @@ class Login extends CI_Controller
             $this->session->set_userdata('plan_collaborator', $row->collaborator);  // plano colaborador
             $this->session->set_userdata('reset', $row->reset);                     // situacao do usuario logado
 
+            // dump($row);
+
             if ($row->password === $password and $row->reset == '0' and $row->status_person == '1') {
                 return 'success';
             }

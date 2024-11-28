@@ -90,22 +90,22 @@ class UserCompanys extends CI_Controller
      */
     public function create()
     {
-        $page_data['user_company'] = $this->UserCompany->get_user_company();
+        // $page_data['user_company'] = $this->UserCompany->get_user_company();
         
         /*- company -*/
-        $id_company = $page_data['user_company']['id_company'];
-        $page_data['company'] = $this->Company->get_all_company($id_company);
+        // $id_company = $page_data['user_company']['id_company'];
+        // $page_data['company'] = $this->Company->get_all_company($id_company);
 
         /*- profile -*/
-        $id_profile = $page_data['user_company']['id_profile'];
-        $page_data['profile'] = $this->Profile->get_all_profile($id_profile);
+        // $id_profile = $page_data['user_company']['id_profile'];
+        // $page_data['profile'] = $this->Profile->get_all_profile($id_profile);
 
         /*- states -*/
         $page_data['state'] = $this->States->get_all_states();
 
         /*- countrys -*/
         $page_data['country'] = $this->Country->get_all_country();
-
+        /*
         if (isset($_POST) && count($_POST) > 0) {
             //* check if cpf_cnpj or email already exists
             // $password = $this->input->post('password');
@@ -118,7 +118,7 @@ class UserCompanys extends CI_Controller
             //     if ($person['cpf']) $this->session->set_flashdata('flash_message_error', 'CPF já cadastrado no sistema.');
             // }
 
-            /** select city from the chosen state */
+            //** select city from the chosen state /
             $city_state = $this->City->get_all_cityState($this->input->post('state_name'), $this->input->post('city'));
             
             //* save tb-neighborhood
@@ -129,7 +129,7 @@ class UserCompanys extends CI_Controller
             
             $this->Neighborhood->add_neighborhood($params_neighborhood);
 
-            /** select neighborhood from the chosen city */
+            //** select neighborhood from the chosen city /
             $neighborhood_city = $this->Neighborhood->get_all_neighborhoodCity($city_state['id'], $this->input->post('neighborhood'));
 
             //* save tb-place
@@ -140,7 +140,7 @@ class UserCompanys extends CI_Controller
             
             $this->Places->add_places($params_place);
 
-            /** select place from the chosen neighborhood */
+            //** select place from the chosen neighborhood /
             $place_neighborhood = $this->Places->get_all_placeNeighborhood($neighborhood_city['id'], $this->input->post('place'));
 
             //* save tb-address
@@ -153,7 +153,7 @@ class UserCompanys extends CI_Controller
             
             $this->Address->add_address($params_address);
 
-            /** select address from the chosen place */
+            //** select address from the chosen place /
             $address_place = $this->Address->get_all_addressPlace($place_neighborhood['id'], notformat_zipcode($this->input->post('zipcode')));
             
             $data_nasc = date('Y-m-d',strtotime(str_replace('/', '-', $this->input->post('data_nasc'))));
@@ -174,7 +174,7 @@ class UserCompanys extends CI_Controller
             
             $this->Person->add_person($params_person);
 
-            /** select person from the chosen person */
+            //** select person from the chosen person /
             $person_address = $this->Person->get_all_personEmployee($address_place['id'], notformat_cpf($this->input->post('login')));
             
             //* save tb-user-company
@@ -225,10 +225,10 @@ class UserCompanys extends CI_Controller
             $this->Email->account_opening_email($profile, $email, $pass);
             $this->session->set_flashdata('flash_message', get_phrase('user_company_create'));
             redirect(base_url() .'admin/usuario-empresa', 'refresh');
-        } else {
+        } else { */
             $page_data['page_name']  = 'user_company/create';
             $page_data['page_title'] = get_phrase('users') .' '. get_phrase('employers');
-        }
+        // }
 
         $page_data['js'] = load_js(['symee/user-company/script.js']);
         $this->load->view('backend/index', $page_data);   
