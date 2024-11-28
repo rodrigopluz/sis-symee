@@ -36,7 +36,7 @@
 <!-- <script src="<?= base_url(); ?>assets/js/fullcalendar/locale-all.js" type="text/javascript"></script> -->
 
 <?php if ($this->uri->segment(2) == 'locais-trabalho'): ?>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByQN0wFfnLCSWglE21nyPakQYoGyzhlF8&amp;sensor=false"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByQN0wFfnLCSWglE21nyPakQYoGyzhlF8&amp;sensor=false"></script> -->
 <?php endif; ?>
 
 <script>
