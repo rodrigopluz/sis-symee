@@ -53,14 +53,14 @@ class Email extends CI_Model
 	private function do_email($msg = NULL, $sub = NULL, $to = NULL, $from = NULL)
 	{
 		$config = [];
-        $config['useragent'] 	= 'Symee';
+        $config['useragent'] 		= 'Symee';
         $config['mailpath']	 	= '/usr/bin/sendmail'; // or '/usr/sbin/sendmail'
         $config['protocol']	 	= 'smtp';
-        $config['smtp_host'] 	= 'ssl://mail.symee.com.br';
-        $config['smtp_port'] 	= '465';
-        $config['smtp_timeout'] = '30';
-		$config['smtp_user']	= 'contato@symee.com.br';
-		$config['smtp_pass']	= 'Ow2018@,';
+        $config['smtp_host'] 		= 'ssl://mail.symee.com.br';
+        $config['smtp_port'] 		= '465';
+        $config['smtp_timeout'] 	= '30';
+		$config['smtp_user']	= '';
+		$config['smtp_pass']	= '';
         $config['mailtype']	 	= 'html';
         $config['charset']	 	= 'utf-8';
         $config['newline']	 	= "\r\n";
