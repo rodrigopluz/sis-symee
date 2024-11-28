@@ -49,5 +49,7 @@ user_guide_src/cilexer/pycilexer.egg-info/
 /tests/tests/
 /tests/results/
 
+.env
+
 ## Arquivos da aplicação modificados temporariamente
 #/vendor/emberlabs/gravatarlib/emberlabs/gravatarlib
